@@ -1,0 +1,15 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,58,&H00FFFFFF,&H00F8BD38,&H00120803,&H96000000,-1,0,0,0,100,100,0,0,1,6,2,2,80,80,235,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.20,0:00:03.30,Default,,0,0,0,,Why does light {\c&H00F8BD38&}bend{\c&H00FFFFFF&} when it hits water?
+Dialogue: 0,0:00:03.40,0:00:06.70,Default,,0,0,0,,In 1621, {\c&H00F8BD38&}Willebrord Snellius{\c&H00FFFFFF&} cracked the exact math.
+Dialogue: 0,0:00:06.80,0:00:09.80,Default,,0,0,0,,{\c&H00F8BD38&}n₁ sin θ₁ = n₂ sin θ₂{\c&H00FFFFFF&} — powering every lens today!
