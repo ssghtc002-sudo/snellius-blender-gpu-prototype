@@ -49,6 +49,12 @@ scene.cycles.use_adaptive_sampling = True
 scene.cycles.adaptive_threshold = 0.05
 scene.cycles.use_denoising = True
 scene.cycles.denoiser = "OPENIMAGEDENOISE"
+scene.cycles.denoising_input_passes = "RGB_ALBEDO_NORMAL"
+scene.cycles.denoising_prefilter = "FAST"
+try:
+    scene.cycles.denoising_use_gpu = True
+except Exception:
+    pass
 scene.cycles.max_bounces = 6
 scene.cycles.transmission_bounces = 6
 scene.cycles.glossy_bounces = 3
@@ -77,10 +83,8 @@ try:
                 for d in prefs.devices:
                     d.use = d.type == backend
                 scene.cycles.device = "GPU"
-                if backend == "OPTIX":
-                    scene.cycles.denoiser = "OPTIX"  # 10x faster NVIDIA T4 Tensor-Core denoising!
                 gpu_enabled = True
-                print(f"[Cycles] Enabled GPU backend: {backend} ({len(gpu_devices)} device(s)) | Denoiser: {scene.cycles.denoiser}")
+                print(f"[Cycles] Enabled GPU backend: {backend} ({len(gpu_devices)} device(s)) | Denoiser: {scene.cycles.denoiser} (FAST GPU)")
                 break
         except Exception:
             continue
